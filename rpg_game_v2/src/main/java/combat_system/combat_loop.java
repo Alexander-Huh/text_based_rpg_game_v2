@@ -20,7 +20,7 @@ public class combat_loop {
         char_one c1_obj = new char_one();
         spell_loop spell_loop = new spell_loop();
         attack_loop attack_loop = new attack_loop();
-        inventory_usage use_items = new inventory_usage();
+        inventory_display use_items = new inventory_display();
         get_set_strings string_obj = new get_set_strings();
 
         Scanner scan = new Scanner(System.in);

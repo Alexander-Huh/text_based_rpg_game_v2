@@ -26,7 +26,7 @@ public class rpg_game_v2_main {
             set_items.get_all_item_names().add("Tents");
 
         // -----------gets entire inventory array
-        inventory_usage item_usage = new inventory_usage();
+        inventory_display item_usage = new inventory_display();
         item_usage.use_items(set_items.get_all_inventory(), set_items.get_all_item_names());
 
         // -------------------combat loop object, responsible for entire flow of combat

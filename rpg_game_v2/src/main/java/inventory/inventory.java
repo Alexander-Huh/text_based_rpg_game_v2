@@ -6,7 +6,6 @@ public class inventory{
 
     //-------------------private variable for an array list that holds quantity of items
     private ArrayList<Integer> char1_item_quant = new ArrayList<Integer>();
-
     //-------------------private variable for arrayList that holds names of items character has
     private ArrayList<String> item_names = new ArrayList<String>();
 
