@@ -3,11 +3,11 @@ package combat_system;
 import enemy_stats.*;
 import player_stats.*;
 import magic.*;
-import strings.*;
 import inventory.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class combat_loop {
 
@@ -21,7 +21,6 @@ public class combat_loop {
         spell_loop spell_loop = new spell_loop();
         attack_loop attack_loop = new attack_loop();
         inventory_display use_items = new inventory_display();
-        get_set_strings string_obj = new get_set_strings();
 
         Scanner scan = new Scanner(System.in);
 
@@ -137,9 +136,8 @@ public class combat_loop {
                 break;
             }
         }
-
         System.out.print("test: attack_loop");
-
-    }
-
+    }   
 }
+
+
