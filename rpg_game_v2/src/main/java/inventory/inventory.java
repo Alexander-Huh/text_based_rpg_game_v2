@@ -1,6 +1,6 @@
 package inventory;
 
-import java.util.Scanner;
+
 public class inventory{
 
     private int[][] char_1_item_inventory = {
