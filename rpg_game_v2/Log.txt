@@ -1,0 +1,10 @@
+2018/12/21:
+	to do:
+	--inventory:
+		implement a for loop so that array values(1/0) can be checked so that entire array can be called at once intead of 
+			statically calling each item name.
+		implement private array into a temp public array so that ArrayLength can be used to get arrays length
+			array length doesnt seem to work on objects of arrays
+		implement more options for inventory menu screen --> use item (self/other), throw away, back)
+	completed:
+		none. ;)
