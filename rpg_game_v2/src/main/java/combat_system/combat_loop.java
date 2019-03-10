@@ -14,7 +14,7 @@ public class combat_loop {
     public void attack_loop(int c1_strength, int c1_hit_limit, int c1_magic, int c1_max_mp, int c1_remaining_mp,
             int hp_restored, int spell_damage, int c1_max_hp, int c1_remaining_hp, int c1_exp, int weapon_damage,
             int monster_hp, int monster_remaining_hp,int absolute_monster_hp, int monster_hit_limit, int monster_strength,int monster_exp_value, 
-            int potions, int gold, int keys, int tents) {
+            ArrayList<Integer> item_quant, ArrayList<String> item_names) {
 
         monster_lvl_1 monster_obj = new monster_lvl_1();
         char_one c1_obj = new char_one();
@@ -125,7 +125,7 @@ public class combat_loop {
                 break;
             case "3":
                 //--------------------opens interface for users to access inventory information
-                use_items.use_items(potions, gold, keys, tents);
+                use_items.use_items(item_quant, item_names);
                 //----------------------------------------------------------------------------------------------------------------------Dont hardcode this!!!!
                 break;
             //---------------ends players turns early

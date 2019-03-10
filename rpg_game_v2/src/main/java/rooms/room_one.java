@@ -38,25 +38,16 @@ public class room_one{
 
         //---------------------starting inventory
         inventory set_items = new inventory();
-            set_items.set_potions_inventory(777);
-            set_items.set_gold_inventory(888);
-            set_items.set_keys_inventory(999);
-            set_items.set_tents_inventory(444);
+            set_items.get_all_inventory().add(777);
+            set_items.get_all_inventory().add(888);
+            set_items.get_all_inventory().add(999);
+            set_items.get_all_inventory().add(111);
 
-            int potions = set_items.get_potions_inventory();
-            int gold = set_items.get_gold_inventory();
-            int keys = set_items.get_keys_inventory();
-            int tents = set_items.get_tents_inventory();
-
-            ArrayList <Integer> ints = new ArrayList<Integer>();
-            ints.add(potions);
-            ints.add(gold);
-            ints.add(keys);
-            ints.add(tents);
-            ints.add(99999999);
+            set_items.get_all_item_names().add("Potions");
+            set_items.get_all_item_names().add("Keys");
+            set_items.get_all_item_names().add("Tents");
+            set_items.get_all_item_names().add("Gold");
             
-
-
         //-------------------weapon stats
         weapons_lvl_1 weapon_obj = new weapons_lvl_1();
             weapon_obj.set_basic_sword(25);
@@ -85,7 +76,7 @@ public class room_one{
 
         comabt_obj.attack_loop(c1_strength, c1_hit_limit, c1_magic, c1_max_mp, c1_remaining_mp, 
         hp_restored, spell_damage, c1_max_hp, c1_remaining_hp, c1_exp, weapon_damage, monster_hp, 
-        monster_remaining_hp, absolute_monster_hp, monster_hit_limit, monster_strength, monster_exp_value, potions, gold, keys, tents);
+        monster_remaining_hp, absolute_monster_hp, monster_hit_limit, monster_strength, monster_exp_value,set_items.get_all_inventory(), set_items.get_all_item_names());
 
 
     }
