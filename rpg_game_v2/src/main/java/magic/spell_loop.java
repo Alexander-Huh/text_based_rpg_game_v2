@@ -1,4 +1,4 @@
-package magic;
+/*package magic;
 
 import player_stats.*;
 import enemy_stats.*;
@@ -84,3 +84,4 @@ public class spell_loop{
     }
     
 }
+*/
