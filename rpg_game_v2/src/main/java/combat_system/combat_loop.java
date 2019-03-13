@@ -32,11 +32,11 @@ public class combat_loop {
             switch (user_input) {
             //----------------initiates players attack against enemy
             case "1":
-                monster1_stats.set(8,(
+                monster1_stats.set(9,(
                         attack_loop.fight(char1_stats, monster1_stats)));
-                if (monster1_stats.get(8) <= 0) {
+                if (monster1_stats.get(9) <= 0) {
                     end_of_turn = 6;
-                } else if (monster1_stats.get(8) > 0) {
+                } else if (monster1_stats.get(9) > 0) {
                     end_of_turn++;
                 }
                 break;

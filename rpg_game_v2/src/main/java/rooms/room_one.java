@@ -17,33 +17,35 @@ public class room_one{
         //-----------------------character's stats
         char_one char_1_stats = new char_one();
         
-        //------------------------hp, remainging hp, absolute hp
-           char_1_stats.get_char1_stats().add(75);
-           char_1_stats.get_char1_stats().add(50);
-        //----------------------str, agi, spirit
-            char_1_stats.get_char1_stats().add(15);
-            char_1_stats.get_char1_stats().add(10);
-            char_1_stats.get_char1_stats().add(10);
+        //------------------------hp,mp
+           char_1_stats.get_char1_stats().add(75);//0
+           char_1_stats.get_char1_stats().add(50);//1
+        //----------------------str, agi, spirit,def
+            char_1_stats.get_char1_stats().add(15);//2
+            char_1_stats.get_char1_stats().add(10);//3
+            char_1_stats.get_char1_stats().add(10);//4
+            char_1_stats.get_char1_stats().add(15);//5
         //------------------------hit limit
-            char_1_stats.get_char1_stats().add(2);
+            char_1_stats.get_char1_stats().add(2);//6
         //--------------------------------EXP
-            char_1_stats.get_char1_stats().add(100);
+            char_1_stats.get_char1_stats().add(100);//7
         //-------------------------------lvl
-            char_1_stats.get_char1_stats().add(1);
+            char_1_stats.get_char1_stats().add(1);//8
         //-------------------------remaining hp, absolute hp
-           char_1_stats.get_char1_stats().add(75);
-           char_1_stats.get_char1_stats().add(100);
+           char_1_stats.get_char1_stats().add(75);//9
+           char_1_stats.get_char1_stats().add(100);//10
         //-----------------------reamaining mp, absolute mp
-           char_1_stats.get_char1_stats().add(50);
-           char_1_stats.get_char1_stats().add(75);
+           char_1_stats.get_char1_stats().add(50);//11
+           char_1_stats.get_char1_stats().add(75);//12
         //------------------wepaon damage
-            char_1_stats.get_char1_stats().add(10);
+            char_1_stats.get_char1_stats().add(10);//13
         /////////////////////////////////////////////////////////////////////////stats names:
         char_1_stats.get_stat_names().add("HP");
         char_1_stats.get_stat_names().add("MP");
         char_1_stats.get_stat_names().add("Strength");
         char_1_stats.get_stat_names().add("Agility");
         char_1_stats.get_stat_names().add("Spirit");
+        char_1_stats.get_stat_names().add("Defense");
         char_1_stats.get_stat_names().add("Hit Limit");
         char_1_stats.get_stat_names().add("EXP");
         char_1_stats.get_stat_names().add("Level");
@@ -65,23 +67,24 @@ public class room_one{
         //---------------------first monster's stats
         monster_lvl_1 monster_stats = new monster_lvl_1();
             
-            monster_stats.get_monster1_stats().add(100);
-            monster_stats.get_monster1_stats().add(50);
-            monster_stats.get_monster1_stats().add(50);
-            monster_stats.get_monster1_stats().add(10);
-            monster_stats.get_monster1_stats().add(3);
-            monster_stats.get_monster1_stats().add(1);
-            monster_stats.get_monster1_stats().add(1000);
+            monster_stats.get_monster1_stats().add(100);//0
+            monster_stats.get_monster1_stats().add(50);//1
+            monster_stats.get_monster1_stats().add(50);//2
+            monster_stats.get_monster1_stats().add(10);//3
+            monster_stats.get_monster1_stats().add(3);//4
+            monster_stats.get_monster1_stats().add(15);//5
+            monster_stats.get_monster1_stats().add(1);//6
+            monster_stats.get_monster1_stats().add(1000);//7
 
-            monster_stats.get_monster1_stats().add(1);
+            monster_stats.get_monster1_stats().add(1);//8
 
-            monster_stats.get_monster1_stats().add(100);
-            monster_stats.get_monster1_stats().add(101);
+            monster_stats.get_monster1_stats().add(100);//9
+            monster_stats.get_monster1_stats().add(101);//10
 
-            monster_stats.get_monster1_stats().add(50);
-            monster_stats.get_monster1_stats().add(50);
+           monster_stats.get_monster1_stats().add(50);//11
+            monster_stats.get_monster1_stats().add(50);//12
 
-            monster_stats.get_monster1_stats().add(50);
+            monster_stats.get_monster1_stats().add(50);//13
 
         int spell_damage = 25;
         int hp_restored = 50;
