@@ -34,9 +34,6 @@ public class combat_loop {
             case "1":
                 monster1_stats.set(8,(
                         attack_loop.fight(char1_stats, monster1_stats)));
-                //int monster_hp = monster1_stats.get(8);
-                // user_input = scan.nextLine();
-                System.out.println(monster1_stats.get(8));
                 if (monster1_stats.get(8) <= 0) {
                     end_of_turn = 6;
                 } else if (monster1_stats.get(8) > 0) {
