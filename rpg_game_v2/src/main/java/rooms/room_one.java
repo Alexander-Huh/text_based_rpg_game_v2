@@ -21,7 +21,7 @@ public class room_one{
            char_1_stats.get_char1_stats().add(75);//0
            char_1_stats.get_char1_stats().add(50);//1
         //----------------------str, agi, spirit,def
-            char_1_stats.get_char1_stats().add(15);//2
+            char_1_stats.get_char1_stats().add(25);//2
             char_1_stats.get_char1_stats().add(10);//3
             char_1_stats.get_char1_stats().add(10);//4
             char_1_stats.get_char1_stats().add(15);//5
