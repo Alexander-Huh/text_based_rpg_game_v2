@@ -6,6 +6,7 @@ public class inventory{
 
     //-------------------private variable for an array list that holds quantity of items
     private ArrayList<Integer> char1_item_quant = new ArrayList<Integer>();
+
     //-------------------private variable for arrayList that holds names of items character has
     private ArrayList<String> item_names = new ArrayList<String>();
 
@@ -19,7 +20,7 @@ public class inventory{
         return this.item_names;
     }
 
-    //-----------------gets length of inventory/quantity arrayList for character 1
+    //-----------------gets length of inventory/quantity arrayList
     public int get_char1_inv_size(){
         return this.char1_item_quant.size();
     }

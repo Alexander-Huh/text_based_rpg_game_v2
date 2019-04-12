@@ -1,37 +1,44 @@
 package combat_system;
 
 import java.util.Random;
-import enemy_stats.*;
+import java.util.ArrayList;
 
-//-------------"player attack loop. "monster attack loop" needed
+//-------------player attack loop. "monster attack loop" needed
 public class attack_loop {
 
-    // ----gets int variables from fight_v21  method
-    public int fight(int weapon_damage, int player_strength, int player_hit_limit, int monster_health,
-            int remaining_monster_health, int absolute_monster_hp){
+    // ----gets int variables from attack_loop method
+    public int fight(ArrayList<Integer> char1_stats, ArrayList<Integer> monster1_stats) {
 
         Random rand = new Random();
 
-        monster_lvl_1 monster_obj = new monster_lvl_1();
-
         // sets initial hit limit to 0
         int hit_limit = 0;
+        // counts number of hits/turns taken
         int counter = 1;
 
-       // while (counter <= player_hit_limit) {
+
+        if (monster1_stats.get(9) > 0) {
             System.out.println("\nHit #:\t\tMonster HP:");
-            for (hit_limit = 1; hit_limit <= player_hit_limit; hit_limit++) {
-                // --------------subtracts a random number, based on player strength and weapon
-                // strength added together, from monster's health value
-                remaining_monster_health = monster_health - rand.nextInt(weapon_damage + (player_strength + 1));
-                System.out.print(counter++ + "\t\t");
-                System.out.println(remaining_monster_health + " / " + absolute_monster_hp);
-                // -------------sets new monster health value to old monster health value
-                monster_health = remaining_monster_health;
+            for (hit_limit = 1; hit_limit <= char1_stats.get(6); hit_limit++) {
+                /*--------------subtracts a random number, based on player strength and weapon
+                                strength added together, from monster's health value*/
+                monster1_stats.set(9,
+                        monster1_stats.get(9) - rand.nextInt(char1_stats.get(13) + (char1_stats.get(2) + 1)));
+
+                if (monster1_stats.get(9) > 0) {
+                    System.out.print(counter++ + "\t\t");
+                    System.out.println(monster1_stats.get(9) + " / " + monster1_stats.get(10));
+                    // -------------sets new monster health value to old monster health value
+                    monster1_stats.set(9, monster1_stats.get(9));
+                }
             }
-       // }
-        //System.out.print("[1]: ATTACK\t[2]: SPELLS\t[3]: INVENTORY\t[4]: FLEE\t[5]: END TURN: ");
-        monster_obj.set_remaining_monster_hp(remaining_monster_health);
-        return monster_obj.get_remaining_monster_hp();
+
+        }
+        if (monster1_stats.get(9) <= 0) {
+            System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
+        }
+
+        monster1_stats.set(9, monster1_stats.get(9));// sets remaining health value outside of for loop, for return
+        return monster1_stats.get(9);
     }
 }

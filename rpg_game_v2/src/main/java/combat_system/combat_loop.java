@@ -3,25 +3,21 @@ package combat_system;
 import enemy_stats.*;
 import player_stats.*;
 import magic.*;
-import strings.*;
 import inventory.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class combat_loop {
 
-    public void attack_loop(int c1_strength, int c1_hit_limit, int c1_magic, int c1_max_mp, int c1_remaining_mp,
-            int hp_restored, int spell_damage, int c1_max_hp, int c1_remaining_hp, int c1_exp, int weapon_damage,
-            int monster_hp, int monster_remaining_hp,int absolute_monster_hp, int monster_hit_limit, int monster_strength,int monster_exp_value, 
-            ArrayList<Integer> item_quant, ArrayList<String> item_names) {
+    public void attack_loop(ArrayList<Integer> char1_stats, ArrayList<Integer> monster1_stats,  ArrayList<Integer> item_quant, ArrayList<String> item_names) {
 
         monster_lvl_1 monster_obj = new monster_lvl_1();
         char_one c1_obj = new char_one();
-        spell_loop spell_loop = new spell_loop();
+        //spell_loop spell_loop = new spell_loop();
         attack_loop attack_loop = new attack_loop();
         inventory_display use_items = new inventory_display();
-        get_set_strings string_obj = new get_set_strings();
 
         Scanner scan = new Scanner(System.in);
 
@@ -36,17 +32,15 @@ public class combat_loop {
             switch (user_input) {
             //----------------initiates players attack against enemy
             case "1":
-                monster_obj.set_remaining_monster_hp(
-                        attack_loop.fight(weapon_damage, c1_strength, c1_hit_limit, monster_hp, monster_remaining_hp, absolute_monster_hp));
-                monster_hp = monster_obj.get_remaining_monster_hp();
-                // user_input = scan.nextLine();
-                if (monster_obj.get_remaining_monster_hp() <= 0) {
+                monster1_stats.set(9,(
+                        attack_loop.fight(char1_stats, monster1_stats)));
+                if (monster1_stats.get(9) <= 0) {
                     end_of_turn = 6;
-                } else if (monster_obj.get_remaining_monster_hp() > 0) {
+                } else if (monster1_stats.get(9) > 0) {
                     end_of_turn++;
                 }
                 break;
-            case "2":
+        /*    case "2":
                 System.out.print("Select Element:\n\t [1]: FIRE\t[2]: ICE\t[3]: STONE\t[4]: DARK\t[5]: LIGHT\t: ");
                 user_input = scan.nextLine();
                 switch (user_input) {
@@ -137,9 +131,11 @@ public class combat_loop {
                 break;
             }
         }
-
-        System.out.print("test: attack_loop");
-
-    }
-
+        System.out.print("test: attack_loop");*/
+    
+    }   
 }
+    }
+}
+
+

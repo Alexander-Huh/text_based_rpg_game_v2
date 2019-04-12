@@ -1,11 +1,11 @@
 package rpg_game_v2; //  java rpg_game_v2.rpg_game_v2_main
 
 import levels.*;
-import combat_system.*;
+//import combat_system.*;
 import inventory.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.ArrayList;
+//import java.util.Scanner;
 
 public class rpg_game_v2_main {
 
