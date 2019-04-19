@@ -5,8 +5,8 @@ import enemy_stats.*;
 
 //import java.util.ArrayList;
 import combat_system.*;
-import weapons.*;
 import inventory.*;
+import magic.*;
 
 public class room_one{
 
@@ -62,6 +62,21 @@ public class room_one{
             set_items.get_all_item_names().add("Keys");
             set_items.get_all_item_names().add("Tents");
             set_items.get_all_item_names().add("Gold");
+
+        //--------------------------spell names
+        spell_data spell_values = new spell_data();
+            spell_values.get_spell_names().add("Fire"); //0
+            spell_values.get_spell_names().add("Air"); //1
+            spell_values.get_spell_names().add("Water"); //2
+            spell_values.get_spell_names().add("Earth"); //3
+            spell_values.get_spell_names().add("Heal"); //4
+
+            spell_values.get_spell_dam().add(10); //0 
+            spell_values.get_spell_dam().add(10); //1
+            spell_values.get_spell_dam().add(10); //2
+            spell_values.get_spell_dam().add(10); //3
+            spell_values.get_spell_dam().add(25); //4
+
             
 
         //---------------------first monster's stats
@@ -86,12 +101,10 @@ public class room_one{
 
             monster_stats.get_monster1_stats().add(50);//13
 
-        int spell_damage = 25;
-        int hp_restored = 50;
-
         System.out.println("Monster has appeared!!!!");
 
-        comabt_obj.attack_loop(char_1_stats.get_char1_stats(),monster_stats.get_monster1_stats(),set_items.get_all_inventory(), set_items.get_all_item_names());
+        comabt_obj.attack_loop(char_1_stats.get_char1_stats(),spell_values.get_spell_dam(), spell_values.get_spell_names(),
+                                     monster_stats.get_monster1_stats(),set_items.get_all_inventory(), set_items.get_all_item_names());
 
 
     }

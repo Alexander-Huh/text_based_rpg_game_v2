@@ -15,7 +15,7 @@ public class inventory_display{
             String user_input = scan.nextLine();
             switch(user_input){
                 case "1":
-                   System.out.format("%12s%17s\n--------------------------------\n", "Item:", "Quantity:");
+                   System.out.format("%12s%17s%n\n--------------------------------\n", "Item:", "Quantity:");
                     for(int i = 0; i < item_quant.size(); i++){
                         if(item_quant.get(i) > 0){
                             System.out.format("%13s:%17d%n", item_names.get(i), item_quant.get(i));
