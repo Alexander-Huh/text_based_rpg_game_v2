@@ -66,7 +66,7 @@ public class spell_loop{
                 System.out.println("HP:" + p1_remaining_health + "\t---->\t" + p1_max_health);
                 p1_remaining_health = p1_max_health;
             }
-        }else if(c1_remaining_mp =<0){
+        }else if(c1_remaining_mp <0){
             c1_remaining_mp = 0;
             System.out.println("INSUFFICIENT MP. Spell Failed!");
         }

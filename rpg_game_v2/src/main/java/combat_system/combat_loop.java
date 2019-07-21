@@ -27,7 +27,8 @@ public class combat_loop {
 
         while (end_of_turn != turn_limit) {
             System.out.println("\nTURN #:\t" + end_of_turn + "-------------------------------------------------------");
-            System.out.print("[1]: ATTACK\t[2]: SPELLS\t[3]: INVENTORY\t[4]: FLEE\t[5]: END TURN: --->: ");
+            System.out.println("[1]: ATTACK\t[2]: SPELLS\t[3]: INVENTORY\t[4]: FLEE\t[5]: END TURN:");
+            System.out.print("-------------------------------------------------------\n--->:");
             String user_input = scan.nextLine();
             switch (user_input) {
             //----------------initiates players attack against enemy

@@ -20,7 +20,7 @@ public class room_one{
         //------------------------hp,mp
            char_1_stats.get_char1_stats().add(75);//0
            char_1_stats.get_char1_stats().add(50);//1
-        //----------------------str, agi, spirit,def
+        //----------------------str, agi, magic, def
             char_1_stats.get_char1_stats().add(25);//2
             char_1_stats.get_char1_stats().add(10);//3
             char_1_stats.get_char1_stats().add(10);//4
