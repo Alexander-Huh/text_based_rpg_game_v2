@@ -32,21 +32,25 @@ public class spell_loop{
             for (hit_limit = 1; hit_limit < 2; hit_limit++) {
                 char1_stats.set(11, char1_stats.get(11) - mp_cost);
                 if(char1_stats.get(11) > 0){
-                    System.out.println("\nSpell Cast:\t\tMonster HP:");
+                    System.out.print("\nSpell Cast:  ");
                     // --------------subtracts a random number, based on spell damage and magic level
                     // multiplied together, from monster's health value
                     monster1_stats.set(9, (monster1_stats.get(9) - (rand.nextInt(char1_stats.get(4) + spell_dam.get(4)))));
-                    System.out.print(spell_name + "\t\t\t");
+                    System.out.print(spell_name + "\t\t\t" + "Monster HP:  ");
+
+                }if(monster1_stats.get(9) > 0){
                     System.out.println(monster1_stats.get(9) + " / " + monster1_stats.get(10));
                     // -------------sets new monster health value to old monster health value
                     monster1_stats.set(9, monster1_stats.get(9));
+
                 }else if(char1_stats.get(11) <= 0 ){
-                    char1_stats.set(11, 0);
+                    char1_stats.set(11, char1_stats.get(11));
                     System.out.println("INSUFFICIENT MP. Spell Failed!");
+                    char1_stats.set(11, char1_stats.get(11));
                 }
-           
-                char1_stats.set(11, char1_stats.get(11));
-                                                  
+                if (monster1_stats.get(9) <= 0) {
+                System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
+                }                       
             }
         //System.out.print("[1]: ATTACK\t[2]: SPELLS\t[3]: INVENTORY\t[4]: FLEE\t[5]: END TURN: ");
         monster1_stats.set(9, monster1_stats.get(9));
