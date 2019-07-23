@@ -34,7 +34,7 @@ public class attack_loop {
         }
         if (monster1_stats.get(9) <= 0) {
             System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
-            System.out.format("%s");
+            //System.out.format("%s");
         }
 
         monster1_stats.set(9, monster1_stats.get(9));// sets remaining health value outside of for loop, for return
