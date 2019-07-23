@@ -32,11 +32,11 @@ public class spell_loop{
             for (hit_limit = 1; hit_limit < 2; hit_limit++) {
                 char1_stats.set(11, char1_stats.get(11) - mp_cost);
                 if(char1_stats.get(11) > 0){
-                    System.out.println("\nSpell Cast:\t\tMonster HP:");
+                    System.out.print("\nSpell Cast:  ");
                     // --------------subtracts a random number, based on spell damage and magic level
                     // multiplied together, from monster's health value
                     monster1_stats.set(9, (monster1_stats.get(9) - (rand.nextInt(char1_stats.get(4) + spell_dam.get(4)))));
-                    System.out.print(spell_name + "\t\t\t");
+                    System.out.print(spell_name + "\t\t\t" + "Monster HP:  ");
 
                 }if(monster1_stats.get(9) > 0){
                     System.out.println(monster1_stats.get(9) + " / " + monster1_stats.get(10));

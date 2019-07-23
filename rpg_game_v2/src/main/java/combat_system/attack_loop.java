@@ -18,7 +18,6 @@ public class attack_loop {
 
 
         if (monster1_stats.get(9) > 0) {
-            //System.out.println("\nHit #:\t\tMonster HP:");
             System.out.format("%5s%15s%n\n", "Hit #","Monster HP:");
             for (hit_limit = 1; hit_limit <= char1_stats.get(6); hit_limit++) {
                 /*--------------subtracts a random number, based on player strength and weapon
@@ -26,10 +25,8 @@ public class attack_loop {
                 monster1_stats.set(9, monster1_stats.get(9) - rand.nextInt(char1_stats.get(13) + (char1_stats.get(2) + 1)));
 
                 if (monster1_stats.get(9) > 0) {
-                    //System.out.print(counter++ + "\t\t");
-                    //System.out.println(monster1_stats.get(9) + " / " + monster1_stats.get(10));
                     System.out.format("%5d%15d/%d%n", counter++, monster1_stats.get(9), monster1_stats.get(10));
-                    // -------------sets new monster health value to old monster health value
+                    // -------------sets new monster health value to old monster health value to be used in next combat round
                     monster1_stats.set(9, monster1_stats.get(9));
                 }
             }
@@ -37,6 +34,7 @@ public class attack_loop {
         }
         if (monster1_stats.get(9) <= 0) {
             System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
+            System.out.format("%s");
         }
 
         monster1_stats.set(9, monster1_stats.get(9));// sets remaining health value outside of for loop, for return
