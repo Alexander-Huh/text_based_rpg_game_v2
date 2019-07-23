@@ -65,11 +65,11 @@ public class room_one{
 
         //--------------------------spell names
         spell_data spell_values = new spell_data();
-            spell_values.get_spell_names().add("Fire"); //0
-            spell_values.get_spell_names().add("Air"); //1
-            spell_values.get_spell_names().add("Water"); //2
-            spell_values.get_spell_names().add("Earth"); //3
-            spell_values.get_spell_names().add("Heal"); //4
+            spell_values.get_spell_names().add("BOOM BOOM"); //0
+            spell_values.get_spell_names().add("Baby Hurricane"); //1
+            spell_values.get_spell_names().add("FRO-YO"); //2
+            spell_values.get_spell_names().add("Rocky Road"); //3
+            spell_values.get_spell_names().add("Band-Aid"); //4
 
             spell_values.get_spell_dam().add(10); //0 
             spell_values.get_spell_dam().add(10); //1
