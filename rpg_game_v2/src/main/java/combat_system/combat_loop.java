@@ -49,8 +49,9 @@ public class combat_loop {
                     monster1_stats.set(9, (spell_loop.attack_spells(char1_stats, monster1_stats, spell_dam, "BOOM BOOM")));
                     monster1_stats.set(9, monster1_stats.get(9));
 
-                    System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("MP left: " + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
                     if (monster1_stats.get(9) <= 0) {  
                         end_of_turn = 6;
@@ -65,6 +66,7 @@ public class combat_loop {
 
                     System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
                     if (monster1_stats.get(9) <= 0) {
                         end_of_turn = 6;
@@ -79,6 +81,7 @@ public class combat_loop {
 
                     System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
                     if (monster1_stats.get(9) <= 0) {  
                         end_of_turn = 6;
@@ -93,6 +96,7 @@ public class combat_loop {
 
                     System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
                     if (monster1_stats.get(9) <= 0) {  
                         end_of_turn = 6;
@@ -107,6 +111,7 @@ public class combat_loop {
 
                     System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
                     end_of_turn++;
                     break;

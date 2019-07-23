@@ -4,7 +4,7 @@ import player_stats.*;
 import enemy_stats.*;
 
 import java.util.Scanner;
-
+import java.security.spec.MGF1ParameterSpec;
 import java.util.ArrayList;
 
 import java.util.Random;
@@ -29,29 +29,25 @@ public class spell_loop{
         int mp_cost = 15;
 
             
-            for (hit_limit = 1; hit_limit < 2; hit_limit++) {
-                char1_stats.set(11, char1_stats.get(11) - mp_cost);
-                if(char1_stats.get(11) > 0){
-                    System.out.print("\nSpell Cast:  ");
-                    // --------------subtracts a random number, based on spell damage and magic level
-                    // multiplied together, from monster's health value
-                    monster1_stats.set(9, (monster1_stats.get(9) - (rand.nextInt(char1_stats.get(4) + spell_dam.get(4)))));
-                    System.out.print(spell_name + "\t\t\t" + "Monster HP:  ");
+           for(hit_limit = 1; hit_limit < 2; hit_limit++){
+               char1_stats.set(11, char1_stats.get(11) - mp_cost);
+               if(char1_stats.get(11) > 0){
+                   monster1_stats.set(9, (monster1_stats.get(9) - (rand.nextInt(char1_stats.get(4) + spell_dam.get(4)))));
+                   System.out.format("\n%s%25s%n", "Spell Cast:", "Monster HP");
 
-                }if(monster1_stats.get(9) > 0){
-                    System.out.println(monster1_stats.get(9) + " / " + monster1_stats.get(10));
-                    // -------------sets new monster health value to old monster health value
+                    if(monster1_stats.get(9) > 0){
+                    System.out.format("%18s%20d/%d\n%n", spell_name, monster1_stats.get(9), monster1_stats.get(10));
                     monster1_stats.set(9, monster1_stats.get(9));
-
-                }else if(char1_stats.get(11) <= 0 ){
-                    char1_stats.set(11, char1_stats.get(11));
-                    System.out.println("INSUFFICIENT MP. Spell Failed!");
-                    char1_stats.set(11, char1_stats.get(11));
-                }
-                if (monster1_stats.get(9) <= 0) {
+                    }
+               }else if(char1_stats.get(11) <= 0){
+                   char1_stats.set(11, char1_stats.get(11) + mp_cost);
+                   System.out.println("INSUFFICIENT MP. Spell Failed!");
+               }
+            if(monster1_stats.get(9) <= 0){
                 System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
-                }                       
             }
+           }                  
+            
         //System.out.print("[1]: ATTACK\t[2]: SPELLS\t[3]: INVENTORY\t[4]: FLEE\t[5]: END TURN: ");
         monster1_stats.set(9, monster1_stats.get(9));
         return monster1_stats.get(9);
@@ -76,17 +72,18 @@ public class spell_loop{
                 char1_stats.set(11, char1_stats.get(11) - mp_cost);
                 System.out.println("HP:" + char1_stats.get(11) + "\t---->\t" +char1_stats.get(10));
 
-                char1_stats.set(9, char1_stats.get(10));
+                char1_stats.set(9, char1_stats.get(10));  
             }
         }else if(char1_stats.get(11) <=0){
-            char1_stats.set(11, 0);
+            char1_stats.set(11,char1_stats.get(11) + mp_cost);
             System.out.println("INSUFFICIENT MP. Spell Failed!");
         }
+    
             //------------------makes it so that HP cannot exceed the max hp for the player
             /*c1_max_mp = c1_remaining_mp;
             char_1_stats.set_c1_remaining_mp(c1_max_mp);*/
 
-            /*char_1_stats.set_c1_remaining_hp(p1_remaining_health+hp_restored);
+            /*char_1_stats.set_c1_remaining_hp(p1_remaining_health+hp_restored);k
             return char_1_stats.get_c1_remaining_hp();*/
 
             char1_stats.set(9, char1_stats.get(9));
