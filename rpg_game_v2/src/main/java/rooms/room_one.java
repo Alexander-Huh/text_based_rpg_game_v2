@@ -26,7 +26,7 @@ public class room_one{
             char_1_stats.get_char1_stats().add(10);//4
             char_1_stats.get_char1_stats().add(15);//5
         //------------------------hit limit
-            char_1_stats.get_char1_stats().add(2);//6
+            char_1_stats.get_char1_stats().add(4);//6
         //--------------------------------EXP
             char_1_stats.get_char1_stats().add(100);//7
         //-------------------------------lvl
@@ -35,7 +35,7 @@ public class room_one{
            char_1_stats.get_char1_stats().add(75);//9
            char_1_stats.get_char1_stats().add(100);//10
         //-----------------------reamaining mp, absolute mp
-           char_1_stats.get_char1_stats().add(50);//11
+           char_1_stats.get_char1_stats().add(500);//11
            char_1_stats.get_char1_stats().add(75);//12
         //------------------wepaon damage
             char_1_stats.get_char1_stats().add(10);//13

@@ -15,7 +15,7 @@ public class rpg_game_v2_main {
         level_one level_one_obj = new level_one();
         level_one_obj.lvl_1();
 
-        inventory set_items = new inventory();
+        /*inventory set_items = new inventory();
 
             set_items.get_all_inventory().add(777);
             set_items.get_all_inventory().add(888);
@@ -23,11 +23,11 @@ public class rpg_game_v2_main {
 
             set_items.get_all_item_names().add("Potions");
             set_items.get_all_item_names().add("Keys");
-            set_items.get_all_item_names().add("Tents");
+            set_items.get_all_item_names().add("Tents");*/
 
         // -----------gets entire inventory array
-        inventory_display item_usage = new inventory_display();
-        item_usage.use_items(set_items.get_all_inventory(), set_items.get_all_item_names());
+        /*inventory_display item_usage = new inventory_display();
+        item_usage.use_items(set_items.get_all_inventory(), set_items.get_all_item_names());*/
 
         // -------------------combat loop object, responsible for entire flow of combat
         /*

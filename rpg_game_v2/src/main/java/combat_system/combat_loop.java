@@ -107,7 +107,7 @@ public class combat_loop {
                 //---------------casts a healing spell
                 case "5": 
                     char1_stats.set(9, (spell_loop.healing_spells("Band-Aid", char1_stats, spell_dam)));
-                    char1_stats.set(9, char1_stats.get(9));
+                    char1_stats.set(9, spell_loop.c1_hp_after_spell_cast(char1_stats));
 
                     System.out.println("MP left:\t" + spell_loop.c1_mp_after_spell_cast(char1_stats));
                     char1_stats.set(11, spell_loop.c1_mp_after_spell_cast(char1_stats));

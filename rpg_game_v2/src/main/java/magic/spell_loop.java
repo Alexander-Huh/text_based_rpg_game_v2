@@ -4,7 +4,6 @@ import player_stats.*;
 import enemy_stats.*;
 
 import java.util.Scanner;
-import java.security.spec.MGF1ParameterSpec;
 import java.util.ArrayList;
 
 import java.util.Random;
@@ -12,8 +11,12 @@ import java.util.Random;
 public class spell_loop{
 
     // ----------------creates objects to use methods of other classes
+
+    //accesses stats for character 1 of game
     char_one char_1_stats = new char_one();
+    //accesses stats for generic monster 
     monster_lvl_1 monster_obj = new monster_lvl_1();
+    //accesses data for spells(healing/ combat)
     spell_data spell_data = new spell_data();
 
 
@@ -25,11 +28,11 @@ public class spell_loop{
 
     public int attack_spells(ArrayList<Integer> char1_stats, ArrayList<Integer> monster1_stats, ArrayList<Integer> spell_dam, String spell_name){
 
-        int hit_limit =1;
+        int hit_limit =0;
         int mp_cost = 15;
 
-            
-           for(hit_limit = 1; hit_limit < 2; hit_limit++){
+            //
+           for(hit_limit = 1; hit_limit < char1_stats.get(6); hit_limit++){
                char1_stats.set(11, char1_stats.get(11) - mp_cost);
                if(char1_stats.get(11) > 0){
                    monster1_stats.set(9, (monster1_stats.get(9) - (rand.nextInt(char1_stats.get(4) + spell_dam.get(4)))));
@@ -44,6 +47,8 @@ public class spell_loop{
                    System.out.println("INSUFFICIENT MP. Spell Failed!");
                }
             if(monster1_stats.get(9) <= 0){
+                hit_limit = char1_stats.get(6);
+                System.out.format("%18s%20d/%d\n%n", spell_name, 0, monster1_stats.get(10));
                 System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");
             }
            }                  
@@ -55,9 +60,6 @@ public class spell_loop{
 
     public int healing_spells(String spell_name, ArrayList<Integer> char1_stats, ArrayList<Integer> spell_dam ){
 
-        //int hp_restored, String spell_element, int p1_remaining_health,
-        //int p1_max_health, int c1_max_mp, int c1_remaining_mp
-
         int mp_cost = 10;
         
         char1_stats.set(11, char1_stats.get(11) - mp_cost);
@@ -66,14 +68,19 @@ public class spell_loop{
                 System.out.println("HP:" + char1_stats.get(9) + "\t---->\t" + (char1_stats.get(9) +spell_dam.get(4)));
         
                 char1_stats.set(11, char1_stats.get(11) - mp_cost);
+                char1_stats.set(9,(char1_stats.get(0)+ spell_dam.get(4)));
 
-            }else if((char1_stats.get(9) + spell_dam.get(4)) > char1_stats.get(10)){
-                //p1_remaining_health = p1_max_health;
+            }else if((char1_stats.get(9) < char1_stats.get(10)) && char1_stats.get(9) + spell_dam.get(4) > char1_stats.get(10)){
                 char1_stats.set(11, char1_stats.get(11) - mp_cost);
-                System.out.println("HP:" + char1_stats.get(11) + "\t---->\t" +char1_stats.get(10));
+                System.out.println("HP:" + char1_stats.get(10) + "\t---->\t" +char1_stats.get(10));
 
                 char1_stats.set(9, char1_stats.get(10));  
+
+            }else if((char1_stats.get(9) == char1_stats.get(10))){
+                char1_stats.set(11,char1_stats.get(11) + mp_cost);
+                System.out.println("HP already FULL!! No MP used");
             }
+        
         }else if(char1_stats.get(11) <=0){
             char1_stats.set(11,char1_stats.get(11) + mp_cost);
             System.out.println("INSUFFICIENT MP. Spell Failed!");
@@ -93,6 +100,12 @@ public class spell_loop{
     public int c1_mp_after_spell_cast(ArrayList<Integer> char1_stats){
         char1_stats.set(11, char1_stats.get(11));
         return char1_stats.get(11);
+    }
+
+    public int c1_hp_after_spell_cast(ArrayList<Integer> char1_stats){
+        char1_stats.set(9, char1_stats.get(9));
+        return char1_stats.get(9);
+    }
     
 }
-}
+
