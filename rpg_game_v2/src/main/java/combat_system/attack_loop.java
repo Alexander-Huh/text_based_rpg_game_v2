@@ -30,7 +30,7 @@ public class attack_loop {
                     monster1_stats.set(9, monster1_stats.get(9));
                 }
             }
-            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");1
+            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
         }
         if (monster1_stats.get(9) <= 0) {
             System.out.println("\n--------------------------------\n        Monster Defeated!!!\n");

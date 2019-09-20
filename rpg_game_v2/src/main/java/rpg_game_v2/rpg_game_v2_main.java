@@ -1,8 +1,10 @@
 package rpg_game_v2; //  java rpg_game_v2.rpg_game_v2_main
 
+import rooms.*;
 import levels.*;
 //import combat_system.*;
-import inventory.*;
+//import inventory.*;
+import player_stats.char_one;
 
 //import java.util.ArrayList;
 //import java.util.Scanner;
@@ -13,7 +15,12 @@ public class rpg_game_v2_main {
 
         // --------------level one object
         level_one level_one_obj = new level_one();
-        level_one_obj.lvl_1();
+        //level_one_obj.lvl_1();
+
+        room_two room2 = new room_two();
+
+        room2.room_2();
+
 
         /*inventory set_items = new inventory();
 

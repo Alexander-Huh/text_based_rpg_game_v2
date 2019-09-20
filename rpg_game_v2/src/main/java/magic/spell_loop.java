@@ -13,11 +13,11 @@ public class spell_loop{
     // ----------------creates objects to use methods of other classes
 
     //accesses stats for character 1 of game
-    char_one char_1_stats = new char_one();
+    //char_one char_1_stats = new char_one();
     //accesses stats for generic monster 
-    monster_lvl_1 monster_obj = new monster_lvl_1();
+    //monster_lvl_1 monster_obj = new monster_lvl_1();
     //accesses data for spells(healing/ combat)
-    spell_data spell_data = new spell_data();
+    //spell_data spell_data = new spell_data();
 
 
 
