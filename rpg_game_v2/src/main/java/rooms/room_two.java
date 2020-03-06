@@ -1,7 +1,6 @@
 package rooms;
 
 import player_stats.*;
-import rooms.*; 
 
 public class room_two{
     public void room_2(){
