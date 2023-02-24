@@ -131,7 +131,7 @@ public class combat_loop {
                 break;
             }
         }
-        System.out.print("test: attack_loop");
+        // System.out.print("test: attack_loop");
     
     }   
 }

@@ -13,4 +13,4 @@ public class room_two{
     System.out.println(char1_stats.get_char1_stats().get(0));
 
     }
-}
+} 

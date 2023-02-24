@@ -16,6 +16,7 @@ public class inventory_display{
             switch(user_input){
                 case "1":
                    System.out.format("%12s%17s%n\n--------------------------------\n", "Item:", "Quantity:");
+                //    iterates through the array of item names and quantities using the length of the array for the array size, displays the item name next to the quantity of that item
                     for(int i = 0; i < item_quant.size(); i++){
                         if(item_quant.get(i) > 0){
                             System.out.format("%13s:%17d%n", item_names.get(i), item_quant.get(i));

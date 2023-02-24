@@ -35,8 +35,8 @@ public class room_one{
            char_1_stats.get_char1_stats().add(75);//9
            char_1_stats.get_char1_stats().add(100);//10
         //-----------------------reamaining mp, absolute mp
-           char_1_stats.get_char1_stats().add(500);//11
-           char_1_stats.get_char1_stats().add(75);//12
+           char_1_stats.get_char1_stats().add(75);//11
+           char_1_stats.get_char1_stats().add(500);//12
         //------------------wepaon damage
             char_1_stats.get_char1_stats().add(10);//13
         /////////////////////////////////////////////////////////////////////////stats names:
