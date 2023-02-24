@@ -111,5 +111,6 @@ public class room_one{
         char_1_stats.get_char1_stats().set(0, 123456);
 
         return char_1_stats.get_char1_stats();
+        
     }
 }

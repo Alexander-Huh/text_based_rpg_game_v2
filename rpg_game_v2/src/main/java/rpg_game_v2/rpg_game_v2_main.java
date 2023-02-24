@@ -15,7 +15,12 @@ public class rpg_game_v2_main {
 
         // --------------level one object
         level_one level_one_obj = new level_one();
-        level_one_obj.lvl_1();
+        System.out.println(level_one_obj.lvl_1());
+        
+        System.out.println(level_one_obj.lvl_1().get(1));
+
+        // room_one room1 = new room_one();
+        // System.out.println(room1.room_1());
 
         // room_two room2 = new room_two();
         // room2.room_2();
