@@ -17,8 +17,8 @@ public class rpg_game_v2_main {
         level_one level_one_obj = new level_one();
         level_one_obj.lvl_1();
 
-        room_two room2 = new room_two();
-        room2.room_2();
+        // room_two room2 = new room_two();
+        // room2.room_2();
 
 
         // inventory set_items = new inventory();

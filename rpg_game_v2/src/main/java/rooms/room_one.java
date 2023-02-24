@@ -3,6 +3,8 @@ package rooms;
 import player_stats.*;
 import enemy_stats.*;
 
+import java.util.ArrayList;
+
 //import java.util.ArrayList;
 import combat_system.*;
 import inventory.*;
@@ -10,7 +12,7 @@ import magic.*;
 
 public class room_one{
 
-    public void room_1(){
+    public ArrayList room_1(){
 
         combat_loop comabt_obj = new combat_loop();
 
@@ -106,7 +108,8 @@ public class room_one{
         comabt_obj.attack_loop(char_1_stats.get_char1_stats(),spell_values.get_spell_dam(), spell_values.get_spell_names(),
                                      monster_stats.get_monster1_stats(),set_items.get_all_inventory(), set_items.get_all_item_names());
 
+        char_1_stats.get_char1_stats().set(0, 123456);
 
+        return char_1_stats.get_char1_stats();
     }
-
 }

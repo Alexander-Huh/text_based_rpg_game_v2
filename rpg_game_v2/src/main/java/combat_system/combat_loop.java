@@ -12,8 +12,7 @@ public class combat_loop {
     public void attack_loop(ArrayList<Integer> char1_stats, ArrayList<Integer> spell_dam, ArrayList<String> spell_name, ArrayList<Integer> monster1_stats,
                                         ArrayList<Integer> inventory_quant, ArrayList<String> inventory_names) {
 
-
-        //spell_loop spell_loop = new spell_loop();
+                                            
         attack_loop attack_loop = new attack_loop();
         inventory_display use_items = new inventory_display();
         spell_loop spell_loop = new spell_loop();
