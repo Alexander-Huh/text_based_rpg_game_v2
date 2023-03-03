@@ -1,46 +1,52 @@
 package rpg_game_v2; //  java rpg_game_v2.rpg_game_v2_main
 
-import rooms.*;
 import levels.*;
 import combat_system.*;
 import inventory.*;
 import player_stats.char_one;
+import room.*;
+import player.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.management.ObjectName;
+import javax.naming.spi.StateFactory;
+
+import java.lang.reflect.Array;
 
 public class rpg_game_v2_main {
 
     public static void main(String[] args) {
 
-        // --------------level one object
-        level_one level_one_obj = new level_one();
-        System.out.println(level_one_obj.lvl_1());
+
+
+
+
+
+
+
+
+
+
+
+
         
-        System.out.println(level_one_obj.lvl_1().get(1));
+// --------------------------TESTING------------------------
+        player player_obj = new player();
+        player_obj.set_player_stats(0, 11);
+        player_obj.set_player_stats(1, 22);
+        System.out.println(player_obj.get_stat_names()[1]);
+        System.out.println(player_obj.get_player_stats()[1]);
 
-        // room_one room1 = new room_one();
-        // System.out.println(room1.room_1());
+        inventory inv = new inventory();
+        inv.set_extra_item_name_effect(0, "super potion", "heals all HP");
+        System.out.println(inv.get_extra_item_name_effect()[0][0]);
+        System.out.println(inv.get_extra_item_name_effect()[1][0]);
 
-        // room_two room2 = new room_two();
-        // room2.room_2();
-
-
-        // inventory set_items = new inventory();
-        // // adds new entries into an array that hold the quanties for different items
-        //     set_items.get_all_inventory().add(777);
-        //     set_items.get_all_inventory().add(888);
-        //     set_items.get_all_inventory().add(999);
-        // // addd new antries to an array that stores the names of different items
-        //     set_items.get_all_item_names().add("Potions");
-        //     set_items.get_all_item_names().add("Keys");
-        //     set_items.get_all_item_names().add("Tents");
-
-        // //  -----------gets entire inventory array
-        // inventory_display item_usage = new inventory_display();
-        // item_usage.use_items(set_items.get_all_inventory(), set_items.get_all_item_names());
-
-         
+        inv.set_extra_item_name_effect(1, "super duper potion", "heals all HP of team");
+        System.out.println(inv.get_extra_item_name_effect()[0][1]);
+        System.out.println(inv.get_extra_item_name_effect()[1][1]);
 
     }
 }

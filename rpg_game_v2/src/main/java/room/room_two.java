@@ -1,9 +1,9 @@
-package rooms;
+package room;
 
 import java.util.ArrayList;
 
 import player_stats.*;
-import rooms.*;
+import room.*;
 
 public class room_two {
     public void room_2() {
