@@ -2,7 +2,7 @@ package levels;
 
 import java.util.ArrayList;
 
-import rooms.*;
+import room.*;
 
 public class level_one{
 
